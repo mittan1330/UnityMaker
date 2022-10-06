@@ -8,6 +8,10 @@ public class InGamePresenter : MonoBehaviour
     /// InGameのModel
     /// </summary>
     private InGameModel _inGameModel;
+
+    /// <summary>
+    /// InGameのView
+    /// </summary>
     [SerializeField]
     private InGameView _inGameView;
 

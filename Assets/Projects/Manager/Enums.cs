@@ -11,6 +11,9 @@ namespace Game.Core
         InGameLoadingManager,
     }
 
+    /// <summary>
+    /// それぞれのステージに付与するIDを指定する
+    /// </summary>
     public enum StageGroupes
     {
         //A1.GetName()を利用することでstring型の"A-1"を取得できそう？
