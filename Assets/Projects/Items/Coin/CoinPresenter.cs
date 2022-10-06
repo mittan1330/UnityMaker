@@ -16,7 +16,7 @@ public class CoinPresenter : ItemsBasePresenter
 
     public override void Initalize()
     {
-        SetEvents();
+        
     }
 
     public override void OnDisableSprite()
@@ -24,7 +24,7 @@ public class CoinPresenter : ItemsBasePresenter
         
     }
 
-    public void SetEvents()
+    public override void SetEvents()
     {
         OnHitCoin += inGamePresenter.AddCoin;
     }

@@ -66,10 +66,13 @@ public abstract class ItemsBasePresenter : MonoBehaviour
             Find(CoreGameObject.InGameStageManager.ToString()).
             GetComponent<InGamePresenter>();
         Initalize();
+        SetEvents();
     }
 
     /// <summary>
     /// 継承先クラスで初期化を行うための関数
     /// </summary>
     public abstract void Initalize();
+
+    public abstract void SetEvents();
 }
