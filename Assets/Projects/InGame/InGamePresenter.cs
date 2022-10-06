@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class InGamePresenter : MonoBehaviour
 {
-    [SerializeField]
+    /// <summary>
+    /// InGameのModel
+    /// </summary>
     private InGameModel _inGameModel;
     [SerializeField]
     private InGameView _inGameView;
