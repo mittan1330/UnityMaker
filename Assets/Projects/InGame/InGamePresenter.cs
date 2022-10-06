@@ -8,6 +8,7 @@ public class InGamePresenter : MonoBehaviour
     /// InGameのModel
     /// </summary>
     private InGameModel _inGameModel;
+    public InGameModel inGameModel => _inGameModel;
 
     /// <summary>
     /// InGameのView

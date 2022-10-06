@@ -9,7 +9,8 @@ public class CoinPresenter : ItemsBasePresenter
     /// <summary>
     /// コインに接触した時のAction
     /// </summary>
-    public Action<int> OnHitCoin;
+    public Action OnHitCoin;
+
 
     [SerializeField]
     private int _coinScore;
@@ -26,20 +27,28 @@ public class CoinPresenter : ItemsBasePresenter
 
     public override void SetEvents()
     {
-        OnHitCoin += inGamePresenter.AddCoin;
+        OnHitCoin += inGamePresenter.inGameModel.InGameAddCoin;
+        OnHitItemScore += inGamePresenter.inGameModel.InGameAddScore;
     }
 
-    public void AddScore()
+    /// <summary>
+    /// コインスコアの加算
+    /// </summary>
+    public void AddCoinScore()
     {
-        OnHitCoin?.Invoke(_coinScore);
+        OnHitCoin?.Invoke();
+        OnHitItemScore?.Invoke(_coinScore);
         OnDestroy();
     }
 
+    /// <summary>
+    /// 2Dの当たり判定
+    /// </summary>
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
-            AddScore();
+            AddCoinScore();
         }
     }
 }

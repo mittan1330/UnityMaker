@@ -13,9 +13,9 @@ public class InGameModel
     /// <summary>
     /// InGameゲームでコインを獲得したら変数へ加算するメソッド
     /// </summary>
-    public void InGameAddCoin(int addCoin)
+    public void InGameAddCoin()
     {
-        coin += addCoin;
+        coin += 1;
     }
 
     /// <summary>

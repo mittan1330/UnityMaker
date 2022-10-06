@@ -1,12 +1,13 @@
 using UnityEngine;
 using Game.Core;
+using System;
 
 public abstract class ItemsBasePresenter : MonoBehaviour
 {
     /// <summary>
-    /// アイテムに接触した時のAction
+    /// アイテムに接触した時にスコア加算の為に呼ばれるAction
     /// </summary>
-    //public Action<int> OnHitItem;
+    public Action<int> OnHitItemScore;
 
     /// <summary>
     /// コインに関しての種類を列挙するEnum
@@ -74,5 +75,8 @@ public abstract class ItemsBasePresenter : MonoBehaviour
     /// </summary>
     public abstract void Initalize();
 
+    /// <summary>
+    /// 継承先クラスでActionの繋ぎこみを行うための関数
+    /// </summary>
     public abstract void SetEvents();
 }
