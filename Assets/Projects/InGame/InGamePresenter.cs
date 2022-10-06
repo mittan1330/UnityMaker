@@ -11,8 +11,9 @@ public class InGamePresenter : MonoBehaviour
     [SerializeField]
     private InGameView _inGameView;
 
-    public void AddCoin(int coin)
+    private void Start()
     {
-        _inGameModel.gameCoin += coin;
+        // modelを生成させる
+        _inGameModel = new InGameModel();
     }
 }

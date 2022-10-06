@@ -1,6 +1,28 @@
 public class InGameModel
 {
-    public int gameScore { get; set; }
+    /// <summary>
+    /// InGameゲームで獲得したスコアを代入する変数
+    /// </summary>
+    public int score { get; set; }
 
-    public int gameCoin { get; set; }
+    /// <summary>
+    /// InGameゲームで獲得したコインを代入する変数
+    /// </summary>
+    public int coin { get; set; }
+
+    /// <summary>
+    /// InGameゲームでコインを獲得したら変数へ加算するメソッド
+    /// </summary>
+    public void InGameAddCoin(int addCoin)
+    {
+        coin += addCoin;
+    }
+
+    /// <summary>
+    /// InGameゲームでスコアを獲得したら変数へ加算するメソッド
+    /// </summary>
+    public void InGameAddScore(int addScore)
+    {
+        score += addScore;
+    }
 }
